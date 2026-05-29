@@ -1,0 +1,36 @@
+* , ::after , ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family:Tahoma, sans-serif , 'Cairo',sans-serif;
+    direction: rtl;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.w-100 {
+    width: 100%;
+}
+img {
+    display: block;
+}
+.container {
+    width: 100%;
+    margin: auto;
+}
+.d-flex {
+    display: flex;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+iframe {
+width: 270px;
+background-color: #111827;
+display: block;
+}
