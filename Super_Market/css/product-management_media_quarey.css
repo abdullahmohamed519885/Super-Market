@@ -1,0 +1,23 @@
+@media screen and (min-width:1024px) {
+    .lg-100 {
+        width: 100%;
+    }
+    .lg-32 {
+        width: 32%;
+    }
+    #product .container .inner .content .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+@media screen and (min-width:1280px) {
+    .xl-25 {
+        width: 24%;
+    }
+    #product .container .inner .content .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
