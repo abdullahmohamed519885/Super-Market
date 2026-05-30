@@ -62,7 +62,17 @@
                   />
                 </div>
                 <div class="input-group">
-                  <label for="pro-price">السعر</label>
+                  <label for="pro-price">سعر الشراء</label>
+                  <input
+                    type="number"
+                    id="pro-price"
+                    placeholder="أدخل السعر"
+                    max="1000"
+                    min="1"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="pro-price">سعر البيع</label>
                   <input
                     type="number"
                     id="pro-price"
@@ -82,6 +92,26 @@
                   />
                 </div>
                 <div class="input-group">
+                  <label for="pro-expire-date">تاريخ الصلاحية</label>
+                  <input
+                    type="date"
+                    id="pro-expire-date"
+                    placeholder="mm/dd/yyyy"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="pro-department">اسم المخزن</label>
+                  <select name="pro-department" id="pro-department">
+                    <option value="pro-department" hidden selected>
+                      اختر المخزن
+                    </option>
+                    <option value="pro-department">المخزن الرئيسي</option>
+                    <option value="pro-department">مخزن مسطرد</option>
+                    <option value="pro-department">مخزن اكتوبر</option>
+                    <option value="pro-department">مخزن القاهرة</option>
+                  </select>
+                </div>
+                <div class="input-group">
                   <label for="pro-department">القسم</label>
                   <select name="pro-department" id="pro-department">
                     <option value="pro-department" hidden selected>
@@ -92,14 +122,6 @@
                     <option value="pro-department">منظفات</option>
                     <option value="pro-department">حلويات</option>
                   </select>
-                </div>
-                <div class="input-group">
-                  <label for="pro-expire-date">تاريخ الصلاحية</label>
-                  <input
-                    type="date"
-                    id="pro-expire-date"
-                    placeholder="mm/dd/yyyy"
-                  />
                 </div>
                 <div class=" form-image">
                   <label for="form-image" class="form-image">صورة المنتج</label>
