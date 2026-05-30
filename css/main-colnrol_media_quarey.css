@@ -41,4 +41,7 @@
     .xl-24 {
         width: 24%;
     }
+    iframe {
+        height: 965px;
+    }
 }
