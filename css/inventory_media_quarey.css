@@ -1,0 +1,37 @@
+@media screen and (min-width:1100px) {
+    .lg-32 {
+        width: 32%;
+    }
+    .lg-100 {
+        width: 100%;
+    }
+    .lg-49 {
+        width: 49%;
+    }
+    #inventory .container .inner .content .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #inventory .container .inner .content .filters .filter-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media screen and (min-width:1310px) {
+    .xl-24 {
+        width: 24%;
+    }
+    .xl-49 {
+        width: 49%;
+    }
+    #inventory .container .inner .content .table-box .table-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

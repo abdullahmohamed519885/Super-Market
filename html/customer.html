@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Management - إدارة العملاء</title>
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/customer_style.css" />
+    <link rel="stylesheet" href="../css/customer_layout.css" />
+    <link rel="stylesheet" href="../css/customer_media_quarey.css" />
+  </head>
+  <body>
+    <div id="customer">
+      <div class="container">
+        <div class="inner">
+          <iframe
+            src="sidebar.html"
+            frameborder="0"
+            title="sidebar"
+            scrolling="no"
+          ></iframe>
+          <div class="content">
+            <div class="header">
+              <div class="titel">
+                <i class="fa-solid fa-users"></i>
+                <h2>إدارة العملاء</h2>
+              </div>
+        <!-- <div class="used-name">
+                <i class="fa-solid fa-user"></i>
+                <span> مدير النظام</span>
+            </div> -->
+            </div>
+            <div class="cards">
+                <div class="card lg-49 xl-24">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-users"></i> 
+                    </div>
+                    <h3>إجمالي العملاء</h3>
+                    <p>12,540</p>
+                </div>
+                <div class="card lg-49 xl-24">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <h3>عملاء نشطين</h3>
+                    <p>10,210</p>
+                </div>
+                <div class="card lg-49 xl-24">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-crown"></i> 
+                    </div>
+                    <h3>عملاء VIP</h3>
+                    <p>1,250</p>
+                </div>
+                <div class="card lg-49 xl-24">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-wallet"></i> 
+                    </div>
+                    <h3>إجمالي المبيعات</h3>
+                    <p>850K</p>
+                </div>
+            </div>
+            <div class="filters">
+                <div class="titel">
+                    <h3>بحث وفلترة العملاء</h3>
+                </div>
+                <div class="filter">
+                    <div class="input-group lg-49">
+                        <label for="cus-code">كود العميل</label>
+                        <input type="search" id="cus-code" placeholder="CUS_1001">
+                    </div>
+                    <div class="input-group lg-49">
+                        <label for="cus-name">اسم العميل</label>
+                        <input type="search" id="cus-name" placeholder="ادخل اسم العميل">
+                    </div>
+                    <div class="input-group lg-49">
+                        <label for="cus-phone">رقم الهاتف</label>
+                        <input type="tel" id="cus-phone" placeholder="05xxxxxxxx" min="9" max="12" dir="rtl">
+                    </div>
+                    <div class="input-group lg-49">
+                        <label for="cus-email">البريد الإلكتروني</label>
+                        <input type="email" id="cus-email" placeholder="example@gmail.com">
+                    </div>
+                    <div class="input-group lg-49">
+                        <label for="cus-location">البريد الإلكتروني</label>
+                        <input type="search" id="cus-location" placeholder="ادخل العنوان بالتفصيل">
+                    </div>
+                    <div class="input-group lg-49">
+                        <label for="cus-type">نوع العميل</label>
+                        <select name="cus-type" id="cus-type">
+                            <option value="cus-all">كل العملاء</option>
+                            <option value="cus-regular">عميل عادي</option>
+                            <option value="cus-VIP">VIP</option>
+                        </select>
+                    </div>
+                    <div class="upload-img lg-100">
+                        <label for="upload-img">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                            <p>رفع صورة العميل</p>
+                        </label>
+                        <input type="file" accept="image/*" hidden id="upload-img">
+                    </div>
+                </div>
+                <div class="button">
+                    <button type="submit">
+                        <i class="fa-solid fa-plus"></i>
+                        <span> إضافة عميل</span>
+                    </button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

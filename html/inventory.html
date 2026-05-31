@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Management - إدارة المخزون</title>
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/inventory_style.css" />
+    <link rel="stylesheet" href="../css/inventory_layout.css" />
+    <link
+      rel="stylesheet"
+      href="../css/inventory_media_quarey.css"
+    />
+  </head>
+  <body>
+    <div id="inventory">
+      <div class="container">
+        <div class="inner d-flex">
+          <iframe
+            src="sidebar.html"
+            frameborder="0"
+            title="sidebar"
+            scrolling="no"
+          ></iframe>
+          <div class="content">
+            <div class="header">
+              <div class="titel">
+                <i class="fa-solid fa-warehouse"></i>
+                <h2>إدارة المخازن</h2>
+              </div>
+              <!-- <div class="used-name">
+                <i class="fa-solid fa-user"></i>
+                <span> مدير النظام</span>
+              </div> -->
+            </div>
+            <div class="cards">
+              <div class="card lg-32 xl-24">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <h3>إجمالي المنتجات</h3>
+                <span>2,450</span>
+              </div>
+              <div class="card lg-32 xl-24">
+                <i class="fa-solid fa-warehouse"></i>
+                <h3>عدد المخازن</h3>
+                <span>2,450</span>
+              </div>
+              <div class="card lg-32 xl-24">
+                <i class="fa-solid fa-check"></i>
+                <h3>متوفر بالمخزن</h3>
+                <span>2,180</span>
+              </div>
+              <div class="card lg-32 xl-24">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <h3>الوارد اليوم</h3>
+                <span>2,180</span>
+              </div>
+              <div class="card lg-32 xl-49">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <h3>منتجات منخفضة</h3>
+                <span>145</span>
+              </div>
+              <div class="card lg-32 xl-49">
+                <i class="fa-solid fa-xmark"></i>
+                <h3>غير متوفر</h3>
+                <span>25</span>
+              </div>
+            </div>
+            <div class="filters">
+              <h3>فلترة المخزون</h3>
+              <div class="filter-box">
+                <div class="filter-group lg-49 xl-24">
+                  <label for="pro-name">اسم المنتج</label>
+                  <input
+                    type="search"
+                    id="pro-name"
+                    placeholder="ادخل اسم المنتج"
+                  />
+                </div>
+                <div class="filter-group lg-49 xl-24">
+                  <label for="department">القسم</label>
+                  <select name="department" id="department">
+                    <option value="all" selected>الكل</option>
+                    <option value="drink">مشروبات</option>
+                    <option value="foot">مواد غذائيه</option>
+                    <option value="sweet">حلويات</option>
+                  </select>
+                </div>
+                <div class="filter-group lg-49 xl-24">
+                  <label for="inventory-box">حالة المخزون</label>
+                  <select name="inventory-box" id="inventory-box">
+                    <option value="all" selected>الكل</option>
+                    <option value="available">متوفر</option>
+                    <option value="low">منخفض</option>
+                    <option value="unavailable">غير متوفر</option>
+                  </select>
+                </div>
+                <div class="filter-group lg-49 xl-24">
+                  <label for="expaier">تاريخ الصلاحية</label>
+                  <input type="date" id="expaier" placeholder="mm/dd/yyyy" />
+                </div>
+                <button type="submit">
+                  <i class="fa-solid fa-filter"></i>
+                  <span>تطبيق الفلتر</span>
+                </button>
+              </div>
+            </div>
+            <div class="table-box">
+              <div class="table-header">
+                <h3>المخزن الحالي</h3>
+                <button type="submit">
+                  <i class="fa-solid fa-plus"></i>
+                  <span><a href="product-management.html" target="_parent">إضافة منتج</a></span>
+                </button>
+              </div>
+              <div class="table-body">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>الصوره</th>
+                      <th>الكود</th>
+                      <th>اسم المنتج</th>
+                      <th>القسم</th>
+                      <th>الكمية</th>
+                      <th>سعر الشراء</th>
+                      <th>الحالة</th>
+                      <th>الصلاحية</th>
+                      <th>التحكم</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="img">
+                        <img w-100 src="../images/mango.webp" alt="mango">
+                      </td>
+                      <td>1001</td>
+                      <td>عصير مانجو</td>
+                      <td>مشروبات</td>
+                      <td>150</td>
+                      <td>15 ريال</td>
+                      <td><span class="available status">متوفر</span></td>
+                      <td>20/12/2026</td>
+                      <td>
+                        <button class="edit">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="delete">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="img">
+                        <img src="../images/rice.jpg" alt="rice">
+                      </td>
+                      <td>1002</td>
+                      <td>أرز 5 كيلو</td>
+                      <td>مواد غذائية</td>
+                      <td>20</td>
+                      <td>45 ريال</td>
+                      <td><span class="low status">منخفضة</span></td>
+                      <td>10/05/2027</td>
+                      <td>
+                        <button class="edit">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="delete">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="img">
+                        <img w-100 src="../images/chocolate.jpg" alt="chocolate">
+                      </td>
+                      <td>1003</td>
+                      <td>شيكولاته</td>
+                      <td>الحلويات</td>
+                      <td>0</td>
+                      <td>22 ريال</td>
+                      <td><span class="unavailable status">غير متوفر</span></td>
+                      <td>15/08/2026</td>
+                      <td>
+                        <button class="edit">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="delete">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="pagination">
+                <div class="page-count">
+                  <p>عرض 1 - 10 من 120 منتج</p>
+                </div>
+                <div class="pages">
+                  <button type="submit"><i class="fa-solid fa-angle-right"></i></button>
+                  <button type="submit" class="active">1</button>
+                  <button type="submit">2</button>
+                  <button type="submit">3</button>
+                  <button type="submit">4</button>
+                  <button type="submit"><i class="fa-solid fa-angle-left"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Management - إدارة المنتجات</title>
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/product_style.css" />
+    <link rel="stylesheet" href="../css/product_layout.css" />
+    <link rel="stylesheet" href="../css/product_media_quarey.css" />
+  </head>
+  <body>
+    <div id="product">
+      <div class="container">
+        <div class="inner d-flex">
+          <iframe
+            src="sidebar.html"
+            frameborder="0"
+            title="sidebar"
+            scrolling="no"
+          ></iframe>
+          <div class="content">
+            <div class="header">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <h2>إدارة المنتجات</h2>
+            </div>
+            <div class="cards">
+              <div class="card xl-25 lg-32">
+                <h3>إجمالي المنتجات</h3>
+                <span>250</span>
+              </div>
+              <div class="card xl-25 lg-32">
+                <h3>المتوفر بالمخزن</h3>
+                <span>220</span>
+              </div>
+              <div class="card xl-25 lg-32">
+                <h3>منتجات منخفضة</h3>
+                <span>18</span>
+              </div>
+              <div class="card xl-25 lg-100">
+                <h3>منتهية الصلاحية</h3>
+                <span>12</span>
+              </div>
+            </div>
+            <div class="form-box">
+              <h3>إضافة منتج جديد</h3>
+              <div class="forms">
+                <div class="input-group">
+                  <label for="pro-name">اسم المنتج</label>
+                  <input
+                    type="search"
+                    id="pro-name"
+                    placeholder="أدخل اسم المنتج"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="pro-barcode">الباركود</label>
+                  <input
+                    type="number"
+                    id="pro-parcode"
+                    placeholder="أدخل الباركود"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="pro-price">سعر الشراء</label>
+                  <input
+                    type="number"
+                    id="pro-price"
+                    placeholder="أدخل السعر"
+                    max="1000"
+                    min="1"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="pro-price">سعر البيع</label>
+                  <input
+                    type="number"
+                    id="pro-price"
+                    placeholder="أدخل السعر"
+                    max="1000"
+                    min="1"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="pro-count">الكمية</label>
+                  <input
+                    type="number"
+                    id="pro-count"
+                    placeholder="أدخل الكمية"
+                    min="1"
+                    max="5000"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="pro-expire-date">تاريخ الصلاحية</label>
+                  <input
+                    type="date"
+                    id="pro-expire-date"
+                    placeholder="mm/dd/yyyy"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="pro-department">اسم المخزن</label>
+                  <select name="pro-department" id="pro-department">
+                    <option value="pro-department" hidden selected>
+                      اختر المخزن
+                    </option>
+                    <option value="pro-department">المخزن الرئيسي</option>
+                    <option value="pro-department">مخزن مسطرد</option>
+                    <option value="pro-department">مخزن اكتوبر</option>
+                    <option value="pro-department">مخزن القاهرة</option>
+                  </select>
+                </div>
+                <div class="input-group">
+                  <label for="pro-department">القسم</label>
+                  <select name="pro-department" id="pro-department">
+                    <option value="pro-department" hidden selected>
+                      اختر القسم
+                    </option>
+                    <option value="pro-department">مشروبات</option>
+                    <option value="pro-department">منتجات غذائيه</option>
+                    <option value="pro-department">منظفات</option>
+                    <option value="pro-department">حلويات</option>
+                  </select>
+                </div>
+                <div class=" form-image">
+                  <label for="form-image" class="form-image">صورة المنتج</label>
+                  <div class="product-image">
+                      <label for="pro-image"><i class="fa-solid fa-image"></i></label>
+                      <p>اضغط لرفع صورة المنتج</p>
+                    <input type="file" accept="image/*" id="pro-image" hidden>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="button">
+                <i class="fa-solid fa-plus"></i>
+                <span> إضافة المنتج</span>
+              </button>
+            </div>
+            <div class="table-box">
+              <h3>قائمة المنتجات</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>الصوره</th>
+                    <th>الكود</th>
+                    <th>اسم المنتج</th>
+                    <th>القسم</th>
+                    <th>سعر الشراء</th>
+                    <th>سعر البيع</th>
+                    <th>الصلاحيه</th>
+                    <th>التحكم</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="pro-photo"><img src="../images/mango.webp" alt="" class="w-100"></td>
+                    <td>1001</td>
+                    <td>عصير مانجو</td>
+                    <td>مشروبات</td>
+                    <td>15 ريال</td>
+                    <td>20 ريال</td>
+                    <td>2026/12/30</td>
+                    <td>
+                      <button class="edit"><i class="fa-solid fa-pen"></i></button>
+                      <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="pro-photo"><img src="../images/rice.jpg" alt="" class="w-100"></td>
+                    <td>1002</td>
+                    <td>أرز 5 كيلو</td>
+                    <td>مواد غذائية</td>
+                    <td>45 ريال</td>
+                    <td>50 ريال</td>
+                    <td>2027/05/10</td>
+                    <td>
+                      <button class="edit"><i class="fa-solid fa-pen"></i></button>
+                      <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="pro-photo"><img src="../images/chocolate.jpg" alt="" class="w-100"></td>
+                    <td>1003</td>
+                    <td>شيكولاته</td>
+                    <td>حلويات</td>
+                    <td>22 ريال</td>
+                    <td>27 ريال</td>
+                    <td>2026/08/15</td>
+                    <td>
+                      <button class="edit"><i class="fa-solid fa-pen"></i></button>
+                      <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

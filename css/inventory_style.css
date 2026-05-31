@@ -1,0 +1,236 @@
+#inventory .container .inner {
+    background-color: #F3F4F6;
+}
+#inventory .container .inner .content {
+    padding: 140px 20px 20px 20px;
+    flex: 1;
+}
+#inventory .container .inner .content .header {
+    background-color: #4F46E5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    color: #ffffff;
+    border-radius: 10px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 290px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+}
+#inventory .container .inner .content .header .titel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+#inventory .container .inner .content .header .titel i {
+    font-size: 25px;
+    margin-left: 5px;
+}
+/* #inventory .container .inner .content .header .used-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#inventory .container .inner .content .header .used-name i {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #B3ACEE;
+    color: #584DD1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+} */
+#inventory .container .inner .content .cards .card {
+    background-color: aqua;
+    padding: 25px;
+    border-radius: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    transition: 0.3s;
+    text-align: center;
+}
+#inventory .container .inner .content .cards .card:hover {
+    transform: translateY(-5px);
+}
+#inventory .container .inner .content .cards .card i {
+    color: #4F46E5;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+#inventory .container .inner .content .cards .card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #111827;
+}
+#inventory .container .inner .content .cards .card span {
+    font-size: 28px;
+    font-weight: 700;
+    color: #4F46E5;
+}
+#inventory .container .inner .content .filters {
+    padding: 25px;
+    background-color:#ffffff;
+    border-radius: 18px;
+    margin-bottom: 20px;
+}
+#inventory .container .inner .content .filters h3 {
+    font-size: 24px;
+    color: #4F46E5;
+    margin-bottom: 20px;
+}
+#inventory .container .inner .content .filters .filter-group {
+    display: flex;
+    flex-direction: column;
+}
+#inventory .container .inner .content .filters .filter-group label {
+    font-size: 16px;
+    color: #374151;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+#inventory .container .inner .content .filters .filter-group input , select {
+    border: 1px solid #d1d5db;
+    outline: none;
+    padding: 13px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+#inventory .container .inner .content .filters .filter-group input:focus ,
+#inventory .container .inner .content .filters .filter-group select:focus {
+    border-color: #4F46E5;
+    box-shadow: 0 5px 15px #4F46E5;
+}
+#inventory .container .inner .content .filters button {
+    background-color: #4F46E5;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    margin-top: 10px;
+}
+#inventory .container .inner .content .filters button:hover {
+    background-color: #4338ca;
+}
+#inventory .container .inner .content .table-box {
+    padding: 25px;
+    border-radius: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+#inventory .container .inner .content .table-box .table-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#inventory .container .inner .content .table-box .table-header h3 {
+    color: #4F46E5;
+    font-size: 24px;
+    margin-bottom: 10px;
+
+}
+#inventory .container .inner .content .table-box .table-header button {
+    padding: 12px 20px;
+    color: #ffffff;
+    background-color: #4F46E5;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+#inventory .container .inner .content .table-box .table-header button a {
+    color: #ffffff;
+}
+#inventory .container .inner .content .table-box .table-body table {
+    background-color: #111827;
+    width: 100%;
+    color: #ffffff;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-collapse: collapse;
+}
+#inventory .container .inner .content .table-box .table-body table th {
+    padding: 18px;
+}
+#inventory .container .inner .content .table-box .table-body table td {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 30px 0;
+}
+#inventory .container .inner .content .table-box .table-body table .status  {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+#inventory .container .inner .content .table-box .table-body table .available {
+    background-color: #DCFCE7;
+    color: #166534;
+}
+#inventory .container .inner .content .table-box .table-body table .unavailable {
+background-color: #EF4444;
+color: #ffffff;
+}
+#inventory .container .inner .content .table-box .table-body table .low {
+background-color: #FEF3C7;
+color: #92400E;
+}
+#inventory .container .inner .content .table-box .table-body table tbody .img {
+    padding: 0;
+}
+#inventory .container .inner .content .table-box .table-body table tbody .img img {
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+#inventory .container .inner .content .table-box .table-body button {
+    border: none;
+    padding: 12px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+    color: #ffffff;
+}
+#inventory .container .inner .content .table-box .table-body button.edit {
+    background-color: #22C55E;
+}
+#inventory .container .inner .content .table-box .table-body button.delete {
+    background-color: #EF4444;
+}
+#inventory .container .inner .content .table-box .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+#inventory .container .inner .content .table-box .pagination .page-count p {
+color: #6b7280;
+font-size: 15px;
+}
+#inventory .container .inner .content .table-box .pagination .pages button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    background-color: #e5e7eb;
+}
+#inventory .container .inner .content .table-box .pagination .pages button.active {
+    background-color: #4F46E5;
+    color: #ffffff;
+}
+#inventory .container .inner .content .table-box .pagination .pages button:hover {
+    background-color: #4F46E5;
+    color: #ffffff;
+}

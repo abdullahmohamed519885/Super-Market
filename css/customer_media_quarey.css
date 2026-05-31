@@ -1,0 +1,25 @@
+@media screen and (min-width:1024px) {
+    .lg-100 {
+        width: 100%;
+    }
+    .lg-49 {
+        width: 49%;
+    }
+    #customer .container .inner .content .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #customer .container .inner .content .filters .filter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media screen and (min-width:1280px) {
+    .xl-24 {
+        width: 24%;
+    }
+}

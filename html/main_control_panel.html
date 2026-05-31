@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Control Panel</title>
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/main_contral_panel_style.css" />
+    <link rel="stylesheet" href="../css/main_contral_panel_layout.css" />
+    <link rel="stylesheet" href="../css/main-colnrol_media_quarey.css" />
+  </head>
+  <body>
+    <div id="main-control">
+      <div class="container">
+        <div class="inner d-flex">
+          <iframe src="sidebar.html" frameborder="0" title="sidebar" scrolling="no"></iframe>
+          <!-- <div class="sidebar">
+            <div class="content-bar">
+              <div class="top-bar">
+                <div class="logo">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <div class="titel">
+                  <h2>سوبر ماركت</h2>
+                </div>
+              </div>
+              <div class="menus">
+                <a href="../html/main_control_panel.html" class="active">
+                  <i class="fa-solid fa-house"></i>
+                  <span>الرئيسية</span>
+                </a>
+
+                <a href="../html/point_of_sale.html">
+                  <i class="fa-solid fa-cash-register"></i>
+                  <span>نقطة البيع</span>
+                </a>
+
+                <a href="">
+                  <i class="fa-solid fa-box"></i>
+                  <span>إدارة المنتجات</span>
+                </a>
+
+                <a href="">
+                  <i class="fa-solid fa-warehouse"></i>
+                  <span>إدارة المخزون</span>
+                </a>
+
+                <a href="">
+                  <i class="fa-solid fa-users"></i>
+                  <span>إدارة العملاء</span>
+                </a>
+                <a href="">
+                  <i class="fa-solid fa-boxes-packing"></i>
+                  <span>إدارة الموردين</span>
+                </a>
+
+                <a href="">
+                  <i class="fa-solid fa-receipt"></i>
+                  <span>الفواتير والمبيعات</span>
+                </a>
+
+                <a href="">
+                  <i class="fa-solid fa-store"></i>
+                  <span>المشتريات</span>
+                </a>
+
+                <a href="">
+                  <i class="fa-regular fa-bell"></i>
+                  <span>المصروفات</span>
+                </a>
+
+                <a href="">
+                  <i class="fa-solid fa-money-bill-trend-up"></i>
+                  <span>التقارير والارباح</span>
+                </a>
+
+                <a href="">
+                  <i class="fa-solid fa-box"></i>
+                  <span>الصندوق والحسابات</span>
+                </a>
+
+                <a href="">
+                  <i class="fa-solid fa-users-gear"></i>
+                  <span>المستخدمين والصلاحيات</span>
+                </a>
+
+                <a href="">
+                  <i class="fa-solid fa-gear"></i>
+                  <span>الإعدادات</span>
+                </a>
+              </div>
+              <div class="used-name">
+                <div class="used">
+                  <div>
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <div>
+                    <h3>مدير النظام</h3>
+                    <span>admin</span>
+                  </div>
+                </div>
+                <div class="branch">
+                  <i class="fa-solid fa-shop"></i>
+                  <h3>الفرع الرئيسي</h3>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div class="content">
+            <div class="header">
+              <div class="titel">
+                <i class="fa-solid fa-chart-line"></i>
+                <h2>لوحة التحكم</h2>
+              </div>
+              <!-- <div class="used-name">
+                <i class="fa-solid fa-user"></i>
+                <span> مدير النظام</span>
+              </div> -->
+            </div>
+            <div class="search-bar">
+              <div class="titel">
+                <h2>لوحة التحكم</h2>
+                <p>مرحبًا بك في نظام إدارة السوبر ماركت</p>
+              </div>
+              <input type="search" placeholder="بحث..." />
+            </div>
+            <div class="items">
+              <div class="item md-48 lg-32 xl-24">
+                <div class="icon">
+                  <i class="fa-solid fa-money-bill-wave"></i>
+                </div>
+                <h3>إجمالي المبيعات</h3>
+                <span>18,450 ج.م</span>
+              </div>
+              <div class="item md-48 lg-32 xl-24">
+                <div class="icon">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <h3>عدد الطلبات</h3>
+                <span>145</span>
+              </div>
+              <div class="item md-48 lg-32 xl-24">
+                <div class="icon">
+                  <i class="fa-solid fa-users"></i>
+                </div>
+                <h3>العملاء</h3>
+                <span>1,240</span>
+              </div>
+              <div class="item md-48 lg-32 xl-24">
+                <div class="icon">
+                  <i class="fa-solid fa-boxes-stacked"></i>
+                </div>
+                <h3>المنتجات</h3>
+                <span>850</span>
+              </div>
+            </div>
+            <div class="last-bills">
+              <table>
+                <h2>آخر الفواتير</h2>
+                <thead>
+                  <tr>
+                    <th>رقم الفاتورة</th>
+                    <th>العميل</th>
+                    <th>المبلغ</th>
+                    <th>الحاله</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>#INV-1021</td>
+                    <td>أحمد محمد</td>
+                    <td>850 ج.م</td>
+                    <td><span class="status paid">مدفوعة</span></td>
+                  </tr>
+                  <tr>
+                    <td>#INV-1022</td>
+                    <td>محمد علي</td>
+                    <td>420 ج.م</td>
+                    <td><span class="status pending">قيد الانتظار</span></td>
+                  </tr>
+                  <tr>
+                    <td>#INV-1023</td>
+                    <td>ابراهيم أحمد</td>
+                    <td>1,250 ج.م</td>
+                    <td><span class="status paid">مدفوعة</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
