@@ -1,0 +1,45 @@
+@media screen and (min-width:1024px) {
+    .lg-49 {
+        width: 49%;
+    }
+    .lg-24 {
+        width: 24%;
+    }
+    #sales .container .inner .content .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media screen and (min-width:1280px) {
+    .xl-49 {
+        width: 49%;
+    }
+    .xl-35 {
+        width: 430px;
+    }
+    .xl-44 {
+        width: 50%;
+    }
+    .xl-24 {
+        width: 24%;
+    }
+    #sales .container .inner .content .filters .filter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #sales .container .inner .content .filters .button button {
+        padding: 14px 60px;
+    }
+    #sales .container .inner .content .invoices-box .summary {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #sales .container .inner .content .invoices-box .summary .total-box {
+        margin-top: 55px;
+    }
+}

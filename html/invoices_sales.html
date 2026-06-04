@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoices and Sales - الفواتير والمبيعات</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/invoices_sales_style.css">
+    <link rel="stylesheet" href="../css/invoices_sales_layout.css">
+    <link rel="stylesheet" href="../css/invoices_sales_media_quarey.css">
+</head>
+<body>
+    <div id="sales">
+        <div class="container">
+            <div class="inner">
+                <iframe src="sidebar.html" frameborder="0" title="sidebar" scrolling="no"></iframe>
+                <div class="content">
+                    <div class="header">
+                        <div class="titel">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <h2>الفواتير والمبيعات</h2>
+                        </div>
+                        <!-- <div class="used-name">
+                            <i class="fa-solid fa-user"></i>
+                            <span> مدير النظام</span>
+                        </div> -->
+                    </div>
+                    <div class="cards">
+                        <div class="card lg-49 xl-24">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-sack-dollar"></i>
+                            </div>
+                            <h3>إجمالي المبيعات</h3>
+                            <span>245,000</span>
+                        </div>
+                        <div class="card lg-49 xl-24">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-file-invoice"></i>
+                            </div>
+                            <h3>عدد الفواتير</h3>
+                            <span>1,820</span>
+                        </div>
+                        <div class="card lg-49 xl-24">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            <h3>مدفوعات الفيزا</h3>
+                            <span>124,500</span>
+                        </div>
+                        <div class="card lg-49 xl-24">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <h3>أرباح اليوم</h3>
+                            <span>18,250</span>
+                        </div>
+                    </div>
+                    <div class="filters">
+                        <div class="titel">
+                                <h3>بحث وفلترة الفواتير</h3>
+                        </div>
+                        <div class="filter">
+                            <div class="input-filter xl-49">
+                                    <label for="pro-name">اسم المنتج</label>
+                                    <div class="type-filter">
+                                        <select name="name" id="name">
+                                            <option value="code">الباركود</option>
+                                            <option value="name" selected>اسم المنتج</option>
+                                        </select>
+                                        <input type="search" id="pro-name" placeholder="بحث باسم المنتج">
+                                    </div>
+                            </div>
+                            <div class="input-filter xl-49">
+                                    <label for="pro-status">حالة المنتج</label>
+                                    <select name="pro-status" id="pro-status">
+                                        <option value="all" selected>كل الحالات</option>
+                                        <option value="payed">مدفوعة</option>
+                                        <option value="suspended">معلقة</option>
+                                        <option value="canceled">ملغية</option>
+                                    </select>
+                            </div>
+                            <div class="input-filter xl-49" dir="rtl">
+                                    <label for="start-date">من تاريخ</label>
+                                    <input type="date" id="start-date" placeholder="mm/dd/yyyy" dir="rtl">
+                            </div>
+                            <div class="input-filter xl-49">
+                                    <label for="end-date">إلي تاريخ</label>
+                                    <input type="date" id="end-date" placeholder="mm/dd/yyyy" dir="rtl">
+                            </div>
+                        </div>
+                        <div class="button">
+                            <button type="button">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <span>بحث</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="invoices-box">
+                        <div class="invoices-header">
+                            <h3>قائمة الفواتير</h3>
+                            <div class="actions">
+                                <button class="status add">
+                                    <i class="fa-solid fa-plus"></i>
+                                    <span><a href="point_of_sale.html">فاتورة جديدة</a></span>
+                                </button>
+                                <button class="status print">
+                                    <i class="fa-solid fa-print"></i>
+                                    <span>طباعة</span>
+                                </button>
+                                <button class="status export">
+                                    <i class="fa-solid fa-file-export"></i>
+                                    <span>تصدير</span>
+                                </button>
+                            </div>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>م</th>
+                                    <th>رقم الفتوره</th>
+                                    <th>اسم العميل</th>
+                                    <th>التاريخ</th>
+                                    <th>طريقة الدفع</th>
+                                    <th>الاجمالي</th>
+                                    <th>الحالة</th>
+                                    <th>التحكم</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>INV-1001</td>
+                                    <td>محمد أحمد</td>
+                                    <td>20-02-2026</td>
+                                    <td>فيزا</td>
+                                    <td>850 ريال</td>
+                                    <td>
+                                        <span class="payed">مدفوعة</span>
+                                    </td>
+                                    <td>
+                                        <button class="status view">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                        <button class="status print">
+                                            <i class="fa-solid fa-print"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>INV-1002</td>
+                                    <td>احمد علي</td>
+                                    <td>18-03-2026</td>
+                                    <td>كاش</td>
+                                    <td>450 ريال</td>
+                                    <td>
+                                        <span class="suspended">معلقة</span>
+                                    </td>
+                                    <td>
+                                        <button class="status view">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                        <button class="status print">
+                                            <i class="fa-solid fa-print"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>IVN-1003</td>
+                                    <td>ابراهيم احمد</td>
+                                    <td>15-05-2026</td>
+                                    <td>فيزا</td>
+                                    <td>1250 ريال</td>
+                                    <td>
+                                        <span class="canceled">ملغية</span>
+                                    </td>
+                                    <td>
+                                        <button class="status view">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                        <button class="status print">
+                                            <i class="fa-solid fa-print"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="summary">
+                            <div class="methods-pay xl-44">
+                                <h3>طرق الدفع</h3>
+                                <div class="pay-box">
+                                    <span>الدفع النقدي</span>
+                                    <i class="fa-solid fa-money-bill-wave"></i>
+                                </div>
+                                <div class="pay-box">
+                                    <span>الدفع بالفيزا</span>
+                                    <i class="fa-solid fa-credit-card"></i>
+                                </div>
+                                <div class="pay-box">
+                                    <span>Apple Pay</span>
+                                    <i class="fa-brands fa-apple-pay"></i>
+                                </div>
+                            </div>
+                            <div class="total-box xl-35">
+                                <h3>ملخص المبيعات</h3>
+                                <div class="total-item">
+                                    <span>المبيعات</span>
+                                    <span>245,000 ريال</span>
+                                </div>
+                                <div class="total-item">
+                                    <span>الضرائب</span>
+                                    <span>25,000 ريال</span>
+                                </div>
+                                <div class="total-item">
+                                    <span>الخصومات</span>
+                                    <span>5,000 ريال</span>
+                                </div>
+                                <div class="total-item final">
+                                    <span>الإجمالي النهائي</span>
+                                    <span>265,000 ريال</span>
+                                </div>
+                                <button class="checkout">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>إتمام المراجعة</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pagination">
+                            <div class="page-count">
+                                <p>عرض 1 - 10 من 1200 فاتوره</p>
+                            </div>
+                            <div class="pages">
+                                <button>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </button>
+                                <button class="active">1</button>
+                                <button>2</button>
+                                <button>3</button>
+                                <button>4</button>
+                                <button>
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

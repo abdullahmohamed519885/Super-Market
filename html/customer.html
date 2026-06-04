@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Management - إدارة العملاء</title>
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/customer_style.css" />
+    <link rel="stylesheet" href="../css/customer_layout.css" />
+    <link rel="stylesheet" href="../css/customer_media_quarey.css" />
+  </head>
+  <body>
+    <div id="customer">
+      <div class="container">
+        <div class="inner">
+          <iframe
+            src="sidebar.html"
+            frameborder="0"
+            title="sidebar"
+            scrolling="no"
+          ></iframe>
+          <div class="content">
+            <div class="header">
+              <div class="titel">
+                <i class="fa-solid fa-users"></i>
+                <h2>إدارة العملاء</h2>
+              </div>
+              <!-- <div class="used-name">
+                <i class="fa-solid fa-user"></i>
+                <span> مدير النظام</span>
+            </div> -->
+            </div>
+            <div class="cards">
+              <div class="card lg-49 xl-24">
+                <div class="card-icon">
+                  <i class="fa-solid fa-users"></i>
+                </div>
+                <h3>إجمالي العملاء</h3>
+                <p>12,540</p>
+              </div>
+              <div class="card lg-49 xl-24">
+                <div class="card-icon">
+                  <i class="fa-solid fa-user-check"></i>
+                </div>
+                <h3>عملاء نشطين</h3>
+                <p>10,210</p>
+              </div>
+              <div class="card lg-49 xl-24">
+                <div class="card-icon">
+                  <i class="fa-solid fa-crown"></i>
+                </div>
+                <h3>عملاء VIP</h3>
+                <p>1,250</p>
+              </div>
+              <div class="card lg-49 xl-24">
+                <div class="card-icon">
+                  <i class="fa-solid fa-wallet"></i>
+                </div>
+                <h3>إجمالي المبيعات</h3>
+                <p>850K</p>
+              </div>
+            </div>
+            <div class="add-customers">
+              <div class="titel">
+                <h3>إضافة عميل جديد</h3>
+              </div>
+              <div class="customer">
+                <div class="input-group lg-49">
+                  <label for="cus-code">كود العميل</label>
+                  <input type="search" id="cus-code" placeholder="CUS_1001" />
+                </div>
+                <div class="input-group lg-49">
+                  <label for="cus-name">اسم العميل</label>
+                  <input
+                    type="search"
+                    id="cus-name"
+                    placeholder="ادخل اسم العميل"
+                  />
+                </div>
+                <div class="input-group lg-49">
+                  <label for="cus-phone">رقم الهاتف</label>
+                  <input
+                    type="tel"
+                    id="cus-phone"
+                    placeholder="05xxxxxxxx"
+                    min="9"
+                    max="12"
+                    dir="rtl"
+                  />
+                </div>
+                <div class="input-group lg-49">
+                  <label for="cus-email">البريد الإلكتروني</label>
+                  <input
+                    type="email"
+                    id="cus-email"
+                    placeholder="example@gmail.com"
+                  />
+                </div>
+                <div class="input-group lg-49">
+                  <label for="cus-location">العنوان</label>
+                  <input
+                    type="search"
+                    id="cus-location"
+                    placeholder="ادخل العنوان بالتفصيل"
+                  />
+                </div>
+                <div class="input-group lg-49">
+                  <label for="cus-type">نوع العميل</label>
+                  <select name="cus-type" id="cus-type">
+                    <option value="cus-all" disabled hidden selected>اختر نوع العميل</option>
+                    <option value="cus-regular">عميل عادي</option>
+                    <option value="cus-VIP">VIP</option>
+                  </select>
+                </div>
+                <div class="input-group lg-49">
+                  <label for="cus-status">حالة العميل</label>
+                  <select name="cus-status" id="cus-status">
+                    <option value="cus-all" disabled selected hidden>اختر حالة العميل</option>
+                    <option value="cus-active">نشط</option>
+                    <option value="cus-inactive">غير نشط</option>
+                  </select>
+                </div>
+                <div class="input-group lg-49">
+                  <label for="cus-pay">طريقة الدفع</label>
+                  <select name="cus-pay" id="cus-pay">
+                    <option value="cus-all" disabled selected hidden>اختر طريقة الدفع</option>
+                    <option value="cus-cash">كاش</option>
+                    <option value="cus-visa">فيزا</option>
+                    <option value="cus-mobile-cash">فودافون كاش</option>
+                  </select>
+                </div>
+                <div class="upload-img lg-100">
+                  <label for="upload-img">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <p>رفع صورة العميل</p>
+                  </label>
+                  <input type="file" accept="image/*" hidden id="upload-img" />
+                </div>
+              </div>
+              <div class="button">
+                <button type="submit">
+                  <i class="fa-solid fa-plus"></i>
+                  <span> إضافة عميل</span>
+                </button>
+              </div>
+            </div>
+            <div class="filters">
+              <div class="titel">
+                <h3>بحث وفلترة العملاء</h3>
+              </div>
+              <div class="filter">
+                <div class="input-filter lg-49">
+                  <label for="name">اسم العميل</label>
+                  <div class="type-filter">
+                    <select name="name" id="name">
+                      <option value="code">كود العميل</option>
+                      <option value="name" selected>اسم العميل</option>
+                      <option value="phone">رقم الهاتف</option>
+                    </select>
+                    <input
+                      type="search"
+                      id="input-name"
+                      placeholder="بحث بإسم العميل"
+                    />
+                  </div>
+                </div>
+                <div class="input-filter lg-49">
+                  <label for="type">حالة العميل</label>
+                  <select name="type" id="type">
+                    <option value="all" selected>كل العملاء</option>
+                    <option value="regular">عميل عادي</option>
+                    <option value="ivp">VIP</option>
+                  </select>
+                </div>
+                <div class="input-filter lg-49">
+                  <label for="city">المدينة</label>
+                  <select name="city" id="city">
+                    <option value="all-city" selected>كل المدن</option>
+                    <option value="city-elreid">الرياض</option>
+                    <option value="city-jaddah">جدة</option>
+                  </select>
+                </div>
+                <div class="input-filter lg-49">
+                  <label for="filter-order">الترتيب</label>
+                  <select name="filter-order" id="filter-order">
+                    <option value="all-order">ترتيب حسب</option>
+                    <option value="lastes-order">الأحدث</option>
+                    <option value="most-buoght">الأكثر شراء</option>
+                  </select>
+                </div>
+              </div>
+              <div class="button">
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>بحث</span>
+                </button>
+              </div>
+            </div>
+            <div class="table-box">
+                <div class="table-header">
+                    <h3>قائمة العملاء</h3>
+                    <button class="export">
+                      <i class="fa-solid fa-file-export"></i>
+                      <span>تصدير</span>
+                    </button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>كود العميل</th>
+                            <th>العميل</th>
+                            <th>الهاتف</th>
+                            <th>البريد الإلكتروني</th>
+                            <th>المدينة</th>
+                            <th>عدد الطلبات</th>
+                            <th>النوع</th>
+                            <th>إجمالي المشتريات</th>
+                            <th>الحالة</th>
+                            <th>التحكم</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CUS-1001</td>
+                            <td>
+                                <div class="cus-img">
+                                <img src="../images/avatar-1.jpg" alt="avatar" w-100>
+                                <h4>أحمد محمد</h4>
+                                </div>
+                            </td>
+                            <td>0558745214</td>
+                            <td>ahmed@gmail.com</td>
+                            <td>الرياض</td>
+                            <td>240</td>
+                            <td>
+                                <div class="vip status">
+                                    <span>VIP</span>
+                                </div>
+                            </td>
+                            <td>25,000 ريال</td>
+                            <td>
+                                <div class="active status">
+                                    <span>نشط</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-control">
+                                    <button class="view">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+                                    <button class="edit">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+                                    <button class="delete">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CUS-1002</td>
+                            <td>
+                                <div class="cus-img">
+                                    <img src="../images/avatar-2.jpg" alt="avatar" w-100>
+                                    <h4>محمد علي</h4>
+                                </div>
+                            </td>
+                            <td>055598678</td>
+                            <td>mohamed@gmail.com</td>
+                            <td>جدة</td>
+                            <td>205</td>
+                            <td>
+                                <div class="regular status">
+                                    <span>عادي</span>
+                                </div>
+                            </td>
+                            <td>40,000 ريال</td>
+                            <td>
+                                <div class="inactive status">
+                                    <span>غير نشط</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-control">
+                                    <button class="view">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+                                    <button class="edit">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+                                    <button class="delete">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CSU-1003</td>
+                            <td>
+                                <div class="cus-img">
+                                <img src="../images/avatar-3.jpg" alt="avatar" w-100>
+                                <h4>خالد حسن</h4>
+                                </div>
+                            </td>
+                            <td>0504442266</td>
+                            <td>khaled@gmail.com</td>
+                            <td>الدمام</td>
+                            <td>280</td>
+                            <td>
+                                <div class="vip status">
+                                    <span>VIP</span>
+                                </div>
+                            </td>
+                            <td>35,000 ريال</td>
+                            <td>
+                                <div class="active status">
+                                    <span>نشط</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-control">
+                                    <button class="view">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+                                    <button class="edit">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+                                    <button class="delete">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <div class="page-count">
+                        <p>
+                            عرض 1 - 10 من أصل 540 عميل
+                        </p>
+                    </div>
+                    <div class="pages">
+                        <button>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>
+                            <i class="fa-solid fa-angle-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

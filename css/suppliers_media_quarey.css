@@ -1,0 +1,37 @@
+@media screen and (min-width:1024px) {
+    .lg-100 {
+        width: 100%;
+    }
+    .lg-49 {
+        width: 49%;
+    }
+    #suppliers .container .inner .content .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #suppliers .container .inner .content .add-suppliers .add-supplier {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+        #suppliers .container .inner .content .filters .filter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        }
+}
+@media screen and (min-width:1280px) {
+    .xl-24 {
+        width: 24%;
+    }
+    #suppliers .container .inner .content .filters .button button {
+        padding: 14px 60px;
+    }
+    #suppliers .container .inner .content .add-suppliers .button button {
+        padding: 14px 35px;
+        }
+}

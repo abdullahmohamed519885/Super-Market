@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppliers Management - إدارة الموردين</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/suppliers_style.css">
+    <link rel="stylesheet" href="../css/suppliers_layout.css">
+    <link rel="stylesheet" href="../css/suppliers_media_quarey.css">
+</head>
+<body>
+    <div id="suppliers">
+        <div class="container">
+            <div class="inner">
+                <iframe src="sidebar.html" frameborder="0" scrolling="no" title="sidebar"></iframe>
+                <div class="content">
+                    <div class="header">
+                        <div class="titel">
+                            <i class="fa-solid fa-truck"></i>
+                            <h2>إدارة الموردين</h2>
+                        </div>
+                        <!-- <div class="used-name">
+                            <i class="fa-solid fa-user"></i>
+                            <span> مدير النظام</span>
+                        </div> -->
+                    </div>
+                    <div class="cards">
+                        <div class="card lg-49 xl-24">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <h3>إجمالي الموردين</h3>
+                            <span>120</span>
+                        </div>
+                        <div class="card lg-49 xl-24">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-user-check"></i>
+                            </div>
+                            <h3>الموردين النشطين</h3>
+                            <span>98</span>
+                        </div>
+                        <div class="card lg-49 xl-24">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-sign-hanging"></i>
+                            </div>
+                            <h3>طلبات معلقة</h3>
+                            <span>14</span>
+                        </div>
+                        <div class="card lg-49 xl-24">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-user-plus"></i>
+                            </div>
+                            <h3>الموردين الجدد</h3>
+                            <span>8</span>
+                        </div>
+                    </div>
+                    <div class="add-suppliers">
+                        <div class="titel">
+                            <h3>إضافة مورد جديد</h3>
+                        </div>
+                        <div class="add-supplier">
+                            <div class="input-group lg-49">
+                                <label for="sup-code">كود المورد</label>
+                                <input type="search" id="sup-code" placeholder="CUS-1001">
+                            </div>
+                            <div class="input-group lg-49">
+                                <label for="sup-name">اسم المورد</label>
+                                <input type="search" id="sup-name" placeholder="ادخل اسم المورد">
+                            </div>
+                            <div class="input-group lg-49">
+                                <label for="sup-phone">رقم الهاتف</label>
+                                <input type="tel" min="9" max="12" id="sup-phone" placeholder="ادخل رقم الهاتف" dir="rtl">
+                            </div>
+                            <div class="input-group lg-49">
+                                <label for="sup-email">البريد الإلكتروني</label>
+                                <input type="email" id="sup-email" placeholder="ادخل البريد الإلكتروني">
+                            </div>
+                            <div class="input-group lg-49">
+                                <label for="pro-type">نوع المنتجات</label>
+                                <select name="pro-type" id="pro-type">
+                                    <option value="all" hidden selected disabled>اختر نوع المنتج</option>
+                                    <option value="food">منتجات غذائية</option>
+                                    <option value="drinks">مشروبات</option>
+                                    <option value="cleaning">منظفات</option>
+                                    <option value="elec-appliances">أجهزة كهربائية</option>
+                                </select>
+                            </div>
+                            <div class="input-group lg-49">
+                                <label for="place">العنوان</label>
+                                <input type="search" id="place" placeholder="ادخل العنوان">
+                            </div>
+                            <div class="input-group lg-49">
+                                <label for="status">الحالة</label>
+                                <select name="status" id="status">
+                                    <option value="all" hidden selected disabled>اختر حالة المورد</option>
+                                    <option value="active">نشط</option>
+                                    <option value="inactive">غير نشط</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <button type="button">
+                                <i class="fa-solid fa-plus"></i>
+                                <span>إضافة المورد</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="filters">
+                        <div class="titel">
+                            <h3>بحث وفلترة العملاء</h3>
+                        </div>
+                        <div class="filter">
+                            <div class="input-filter lg-49">
+                                <label for="filter-name">اسم المورد</label>
+                                <div class="type-filter">
+                                    <select name="name" id="name">
+                                        <option value="code">كود المورد</option>
+                                        <option value="name" selected>اسم المورد</option>
+                                        <option value="phone">رقم هاتف المورد</option>
+                                    </select>
+                                    <input type="search" id="filter-name" placeholder="بحث بإسم المورد">
+                                </div>
+                            </div>
+                            <div class="input-filter lg-49">
+                                <label for="filter-city">المدينة</label>
+                                <select name="filter-city" id="filter-city">
+                                    <option value="all" selected>كل المدن</option>
+                                    <option value="reiad">الرياض</option>
+                                    <option value="madinah">المدينة</option>
+                                    <option value="heddah">جدة</option>
+                                </select>
+                            </div>
+                            <div class="input-filter lg-49">
+                                <label for="filter-status">الحالة</label>
+                                <select name="filter-status" id="filter-status">
+                                    <option value="all" selected>كل الحالات</option>
+                                    <option value="active">نشط</option>
+                                    <option value="inactive">غير نشط</option>
+                                </select>
+                            </div>
+                            <div class="input-filter lg-49">
+                                <label for="filter-depart">القسم</label>
+                                <select name="filter-depart" id="filter-depart">
+                                <option value="all" selected >كل الاقسام</option>
+                                <option value="food">منتجات غذائية</option>
+                                <option value="drinks">مشروبات</option>
+                                <option value="cleaning">منظفات</option>
+                                <option value="elec-appliances">أجهزة كهربائية</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <button type="button">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <span>بحث</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-box">
+                        <div class="titel">
+                            <h3>قائمة الموردين</h3>
+                            <button class="status export">
+                                <i class="fa-solid fa-file-export"></i>
+                                <span>تصدير</span>
+                            </button>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>كود المورد</th>
+                                    <th>اسم المورد</th>
+                                    <th>رقم الهاتف</th>
+                                    <th>المدينة</th>
+                                    <th>القسم</th>
+                                    <th>عدد المنتجات</th>
+                                    <th>اجمالي التعاملات</th>
+                                    <th>الحالة</th>
+                                    <th>التحكم</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CUS-1001</td>
+                                    <td>شركة النور</td>
+                                    <td>056985742</td>
+                                    <td>الرياض</td>
+                                    <td>مواد غذائية</td>
+                                    <td>125</td>
+                                    <td>120,000 ريال</td>
+                                    <td>
+                                        <span class="active status">نشط</span>
+                                    </td>
+                                    <td>
+                                        <div class="button">
+                                            <button class="view">
+                                                <i class="fa-solid fa-eye"></i>
+                                            </button>
+                                            <button class="edit">
+                                                <i class="fa-solid fa-pen"></i>
+                                            </button>
+                                            <button class="delete">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>CUS-1002</td>
+                                    <td>شركة الريان</td>
+                                    <td>056983216</td>
+                                    <td>جدة</td>
+                                    <td>مشروبات</td>
+                                    <td>80</td>
+                                    <td>58,000 ريال</td>
+                                    <td>
+                                        <span class="inactive status">غير نشط</span>
+                                    </td>
+                                    <td>
+                                        <div class="button">
+                                            <button class="view">
+                                                <i class="fa-solid fa-eye"></i>
+                                            </button>
+                                            <button class="edit">
+                                                <i class="fa-solid fa-pen"></i>
+                                            </button>
+                                            <button class="delete">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>CSU-1003</td>
+                                    <td>شركة العالمية</td>
+                                    <td>056987456</td>
+                                    <td>المدينة</td>
+                                    <td>منظفات</td>
+                                    <td>40</td>
+                                    <td>38,000 ريال</td>
+                                    <td>
+                                        <span class="active status">نشط</span>
+                                    </td>
+                                    <td>
+                                        <div class="button">
+                                            <button class="view">
+                                                <i class="fa-solid fa-eye"></i>
+                                            </button>
+                                            <button class="edit">
+                                                <i class="fa-solid fa-pen"></i>
+                                            </button>
+                                            <button class="delete">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="pagination">
+                            <div class="page-count">
+                                <p>عرض 1 - 10 من 5200 مورد</p>
+                            </div>
+                            <div class="pages">
+                                <button>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </button>
+                                <button class="active">1</button>
+                                <button>2</button>
+                                <button>3</button>
+                                <button>4</button>
+                                <button>
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

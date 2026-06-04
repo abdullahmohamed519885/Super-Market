@@ -1,0 +1,25 @@
+@media screen and (min-width:1024px) {
+    .lg-49 {
+        width: 49%;
+    }
+    #purchases .container .inner .content .cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    #purchases .container .inner .content .purchase-box .purchase-form .purchases-input {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+@media screen and (min-width:1280px) {
+    .xl-49 {
+        width: 49%;
+    }
+    .xl-24 {
+        width: 24%;
+    }
+}
